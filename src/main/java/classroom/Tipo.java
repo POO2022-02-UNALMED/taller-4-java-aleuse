@@ -5,8 +5,16 @@ public enum Tipo {
 	
 	private int codigo;
 	private String nombre;
-	public Tipo(int codigo,String nombre) {
+	
+	Tipo(int codigo) {
+		this.codigo = codigo;
+		this.nombre = "Sin nombre";
+	}
+	
+	//public Tipo(int codigo,String nombre) {		Se deja el construcor con visibilidad de paquete
+	Tipo(int codigo,String nombre) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 	}
+	
 }

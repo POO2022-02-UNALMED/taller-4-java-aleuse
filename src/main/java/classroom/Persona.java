@@ -8,9 +8,15 @@ public class Persona {
     
     static {
         totalPersonas = 0;
-        cedula = 3;
+        //cedula = 3;
     }
-
+    
+    //Crear el constructor para persona cuando no se pasan parámetros
+    Persona(){
+    	this.cedula = 0;
+    	totalPersonas++;
+    }
+    
     Persona(long cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
@@ -30,7 +36,8 @@ public class Persona {
     }
 
     Persona(String nombre) {
-        this.nombre = "";
+        this.cedula = 1; //Inicializar cédula en 1 si no se da un valor específico
+		this.nombre = nombre;
         totalPersonas++;
     }
     
